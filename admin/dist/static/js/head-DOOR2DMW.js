@@ -1,0 +1,1 @@
+import{_ as t}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{P as r,y as c,o as n}from"./@vue_runtime-core@3.5.16-Cn8z-kNe.js";import"./@vue_reactivity@3.5.16-Dqy0TPbS.js";import"./@vue_shared@3.5.16-UwmvJIHj.js";const a={};function s(e,_){const o=r("cl-view-head");return n(),c(o,{title:e.$t("标题")},null,8,["title"])}const f=t(a,[["render",s]]);export{f as default};

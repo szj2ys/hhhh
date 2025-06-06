@@ -1,0 +1,1 @@
+import{C as p}from"./index-l1IOnGdE.js";import{d as o}from"./@vue_runtime-core@3.5.16-Cn8z-kNe.js";import"./@vue_reactivity@3.5.16-Dqy0TPbS.js";import"./@vue_shared@3.5.16-UwmvJIHj.js";const u=o({name:"cl-render",props:{...p,modelValue:null,placeholder:String},setup(n,{slots:r}){return()=>{var e;return(e=r.default)==null?void 0:e.call(r,n)}}});export{u as default};

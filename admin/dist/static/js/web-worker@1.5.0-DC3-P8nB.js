@@ -1,0 +1,1 @@
+import{a as e}from"./chardet@2.1.0-CTPPlwpv.js";const r=typeof Worker<"u"?Worker:void 0,o=Object.freeze(Object.defineProperty({__proto__:null,default:r},Symbol.toStringTag,{value:"Module"})),n=e(o);export{n as r};
