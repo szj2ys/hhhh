@@ -1,0 +1,15 @@
+{
+  "keep": {
+    "days": true,
+    "amount": 7
+  },
+  "auditLog": "/home/xiawu_ipd/serve/logs/ipd-admin/.audit/.25b921c077b5a9ae928c2b3ed72d8461a86b98b9-audit.json",
+  "files": [
+    {
+      "date": 1748882842529,
+      "name": "/home/xiawu_ipd/serve/logs/ipd-admin/common-error.log.2025-06-03",
+      "hash": "f90d9aec1ee491916183c9fc7a37a533"
+    }
+  ],
+  "hashType": "md5"
+}

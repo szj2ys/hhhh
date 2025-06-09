@@ -1,0 +1,15 @@
+{
+  "keep": {
+    "days": true,
+    "amount": 7
+  },
+  "auditLog": "/home/xiawu_ipd/serve/logs/ipd-admin/.audit/.5b62966a0e5802378feb1de6f196224cf87a9458-audit.json",
+  "files": [
+    {
+      "date": 1748882842528,
+      "name": "/home/xiawu_ipd/serve/logs/ipd-admin/midway-core.log.2025-06-03",
+      "hash": "658c416353bf699e7444d2a94704d98c"
+    }
+  ],
+  "hashType": "md5"
+}
