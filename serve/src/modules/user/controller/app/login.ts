@@ -8,6 +8,8 @@ import {
 import { Body, Get, Inject, Post, Query } from '@midwayjs/core';
 import { UserLoginService } from '../../service/login';
 import { BaseSysLoginService } from '../../../base/service/sys/login';
+import {Validate} from "@midwayjs/validate";
+import {LoginDTO} from "../../../base/dto/login";
 
 /**
  * 登录
@@ -77,6 +79,17 @@ export class AppUserLoginController extends BaseController {
     return this.ok(
       await this.baseSysLoginService.captcha(width, height, color)
     );
+  }
+
+  /**
+   * 登录
+   * @param login
+   */
+  @CoolTag(TagTypes.IGNORE_TOKEN)
+  @Post('/username', { summary: '登录' })
+  @Validate()
+  async username(@Body() login: LoginDTO) {
+    return this.ok(await this.baseSysLoginService.login(login));
   }
 
   @CoolTag(TagTypes.IGNORE_TOKEN)

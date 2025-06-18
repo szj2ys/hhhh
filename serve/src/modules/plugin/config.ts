@@ -20,8 +20,8 @@ export default options => {
       // 文件上传
       upload: {
         // 地址前缀
-        // domain: `http://127.0.0.1:${options?.app?.getConfig('koa.port')}`,
-        domain: `http://120.79.208.255:30013/api`,
+        domain: `http://127.0.0.1:${options?.app?.getConfig('koa.port')}`,
+        // domain: `http://120.79.208.255:${options?.app?.getConfig('koa.port')}`,
       },
     },
   } as ModuleConfig;

@@ -1,7 +1,8 @@
 import { CoolController, BaseController } from '@cool-midway/core';
-import { Body, Get, Inject, Post } from '@midwayjs/core';
+import {ALL, Body, Del, Get, Inject, Post, Query} from '@midwayjs/core';
 import { UserInfoService } from '../../service/info';
 import { UserInfoEntity } from '../../entity/info';
+import {FlowSessionEntity} from "../../../flow/entity/session";
 
 /**
  * 用户信息
@@ -19,7 +20,23 @@ export class AppUserInfoController extends BaseController {
 
   @Get('/person', { summary: '获取用户信息' })
   async person() {
-    return this.ok(await this.userInfoService.person(this.ctx.user.id));
+    return this.ok(await this.userInfoService.person(this.ctx.user.userId));
+  }
+
+  @Get('/getHistory', { summary: '获取用户聊天历史' })
+  async getHistory(@Query('key') key: string) {
+    return this.ok(await this.userInfoService.getHistory(this.ctx.user.userId, key));
+  }
+
+  // @Body(ALL) user: BaseSysUserEntity
+  @Post('/postHistory', { summary: '更新用户聊天历史' })
+  async postHistory(@Body(ALL) history: FlowSessionEntity) {
+    return this.ok(await this.userInfoService.postHistory(history));
+  }
+
+  @Del('/delHistory', { summary: '删除用户聊天历史' })
+  async delHistory(@Query('key') key: string) {
+    return this.ok(await this.userInfoService.delHistory(this.ctx.user.userId, key));
   }
 
   @Post('/updatePerson', { summary: '更新用户信息' })

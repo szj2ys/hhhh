@@ -17,7 +17,8 @@ export class UserMiddleware implements IMiddleware<Context, NextFunction> {
   @Inject()
   coolUrlTagData: CoolUrlTagData;
 
-  @Config('module.user.jwt')
+  // @Config('module.user.jwt')
+  @Config('module.base.jwt')
   jwtConfig;
 
   ignoreUrls: string[] = [];
@@ -41,6 +42,9 @@ export class UserMiddleware implements IMiddleware<Context, NextFunction> {
         const token = ctx.get('Authorization');
         try {
           ctx.user = jwt.verify(token, this.jwtConfig.secret);
+          if (ctx.user.userId) {
+            ctx.user.id = ctx.user.userId;
+          }
 
           if (ctx.user.isRefresh) {
             throw new CoolCommException('登录失效~');

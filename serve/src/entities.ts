@@ -14,25 +14,26 @@ import * as entity11 from './modules/know/entity/graph/node';
 import * as entity12 from './modules/know/entity/data/type';
 import * as entity13 from './modules/know/entity/data/source';
 import * as entity14 from './modules/know/entity/data/info';
-import * as entity15 from './modules/flow/entity/result';
-import * as entity16 from './modules/flow/entity/log';
-import * as entity17 from './modules/flow/entity/info';
-import * as entity18 from './modules/flow/entity/data';
-import * as entity19 from './modules/flow/entity/config';
-import * as entity20 from './modules/dict/entity/type';
-import * as entity21 from './modules/dict/entity/info';
-import * as entity22 from './modules/demo/entity/goods';
-import * as entity23 from './modules/base/entity/base';
-import * as entity24 from './modules/base/entity/sys/user_role';
-import * as entity25 from './modules/base/entity/sys/user';
-import * as entity26 from './modules/base/entity/sys/role_menu';
-import * as entity27 from './modules/base/entity/sys/role_department';
-import * as entity28 from './modules/base/entity/sys/role';
-import * as entity29 from './modules/base/entity/sys/param';
-import * as entity30 from './modules/base/entity/sys/menu';
-import * as entity31 from './modules/base/entity/sys/log';
-import * as entity32 from './modules/base/entity/sys/department';
-import * as entity33 from './modules/base/entity/sys/conf';
+import * as entity15 from './modules/flow/entity/session';
+import * as entity16 from './modules/flow/entity/result';
+import * as entity17 from './modules/flow/entity/log';
+import * as entity18 from './modules/flow/entity/info';
+import * as entity19 from './modules/flow/entity/data';
+import * as entity20 from './modules/flow/entity/config';
+import * as entity21 from './modules/dict/entity/type';
+import * as entity22 from './modules/dict/entity/info';
+import * as entity23 from './modules/demo/entity/goods';
+import * as entity24 from './modules/base/entity/base';
+import * as entity25 from './modules/base/entity/sys/user_role';
+import * as entity26 from './modules/base/entity/sys/user';
+import * as entity27 from './modules/base/entity/sys/role_menu';
+import * as entity28 from './modules/base/entity/sys/role_department';
+import * as entity29 from './modules/base/entity/sys/role';
+import * as entity30 from './modules/base/entity/sys/param';
+import * as entity31 from './modules/base/entity/sys/menu';
+import * as entity32 from './modules/base/entity/sys/log';
+import * as entity33 from './modules/base/entity/sys/department';
+import * as entity34 from './modules/base/entity/sys/conf';
 export const entities = [
   ...Object.values(entity0),
   ...Object.values(entity1),
@@ -68,4 +69,5 @@ export const entities = [
   ...Object.values(entity31),
   ...Object.values(entity32),
   ...Object.values(entity33),
+  ...Object.values(entity34),
 ];

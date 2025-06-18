@@ -6,6 +6,7 @@ import { CSVLoader } from '@langchain/community/document_loaders/fs/csv';
 import { DocxLoader } from '@langchain/community/document_loaders/fs/docx';
 import { PPTXLoader } from '@langchain/community/document_loaders/fs/pptx';
 import { Document } from '@langchain/core/documents';
+import { XLSXLoader } from './xlsx'; // 兼容xlsx文件
 import * as path from 'path';
 import * as os from 'os';
 
@@ -26,6 +27,7 @@ export class KnowMultiLoader {
       '.csv': path => new CSVLoader(path),
       '.docx': path => new DocxLoader(path),
       '.pptx': path => new PPTXLoader(path),
+      '.xlsx': path => new XLSXLoader(path),
     });
     const docs = await loader.load();
     // 如果是csv，则合成一个文档

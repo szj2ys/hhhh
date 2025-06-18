@@ -45,7 +45,7 @@ export class AdminFlowRunController extends BaseController {
     const context = new FlowContext();
     context.setRequestId(requestId || uuidv4());
     // 如果需要关联上下文，则设置会话ID
-    context.setSessionId(sessionId);
+    context.setSessionId(sessionId || params.objectId);
     // 发送数据
     const send = (data: any) => {
       resStream.write(`data:${JSON.stringify(data)}\n\n`);
@@ -116,7 +116,7 @@ export class AdminFlowRunController extends BaseController {
     // 上下文
     const context = new FlowContext();
     context.setRequestId(requestId || uuidv4());
-    context.setSessionId(sessionId);
+    context.setSessionId(sessionId || params.objectId);
     if (stream) {
       // 设置响应头
       this.ctx.set('Content-Type', 'text/event-stream');

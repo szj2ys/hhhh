@@ -9,6 +9,12 @@ export default {
   typeorm: {
     dataSource: {
       default: {
+        // type: 'postgres',
+        // host: '120.79.208.255',
+        // port: 30014,
+        // username: 'ipd',
+        // password: '123456',
+        // database: 'ipd',
         type: 'postgres',
         host: '120.79.208.255',
         port: 30012,

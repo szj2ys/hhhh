@@ -49,7 +49,7 @@ export class OpenFlowRunController extends BaseController {
     const context = new FlowContext();
     context.setRequestId(requestId || uuidv4());
     // 如果需要关联上下文，则设置会话ID
-    context.setSessionId(sessionId);
+    context.setSessionId(sessionId || params.objectId);
     if (stream) {
       // 设置响应头
       this.ctx.set('Content-Type', 'text/event-stream');
